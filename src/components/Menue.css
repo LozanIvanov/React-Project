@@ -1,0 +1,20 @@
+.menu{
+    background: greenyellow;
+    padding: 10px;
+}
+.toggle{
+    text-align: right;
+}
+.toggle button{
+    background: unset;
+    color:white;
+    border: none;
+}
+.menu li{
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+.menu li a{
+    color:black;
+    text-decoration: none;
+}
