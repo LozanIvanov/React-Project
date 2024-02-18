@@ -12,13 +12,13 @@ import Img from './components/Slider';
 import Hide from './components/HideInput';
 import Forms from './components/ContactForm';
 import Menue from './components/HumbergerMenu';
-
+import Cube from './components/MovingCube';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
 
-    < Menue />
+    <Cube/>
   </React.StrictMode>
 );
 
