@@ -1,19 +1,19 @@
 import React, {useState} from 'react';
 
 export default function AppLogin() {
-    const [formdata, setformdata] = useState({
+    const [data, setdata] = useState({
         username: '',
         password: ''
     });
 
     const [isLogged, setisLogged] = useState(false);
 
-    function handleInput(event) {
+    function Input(event) {
         const {name, value} = event.target;
         setformdata({...formdata, [name]: value });
     }
     function Login(){
-        if(formdata.username == 'user' && formdata.password=='111'){
+        if(data.username == 'user' && data.password=='111' ){
             setisLogged(true)
         }
     }
@@ -26,14 +26,14 @@ export default function AppLogin() {
                         <input  
                         type="text"
                             name="username"
-                            onInput={handleInput}
+                            onInput={Input}
                         />
                     </div>
                     <div>
                         <label>Password</label>
                         <input type="password"
                             name="password"
-                            onInput={handleInput}
+                            onInput={Input}
                         />
                     </div>
                     <div>

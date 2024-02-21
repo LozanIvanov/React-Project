@@ -17,12 +17,15 @@ import AppCount from './components/AppCounter';
 import Text from './exersize1/ComponentText';
 import Blue from './exersize1/UlBlue';
 import AppLogin from './exersize1/AppLogin';
+import Check from './exersize1/Checkbox';
+import AppButton from './exersize1/AppButton';
+import AppDropdown from './exersize1/AppDropdown';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
 
-    <AppLogin/>
+    <AppDropdown/>
   </React.StrictMode>
 );
 

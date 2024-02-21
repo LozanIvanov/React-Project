@@ -1,0 +1,16 @@
+.dropdown{
+    display:flex;
+    flex-direction:column
+}
+.dd-label{
+    font-weight: bold;
+}
+.dd-select{
+    padding: 0.5rem;
+    border:unset;
+    background: #f3f3f3;
+    color:#333;
+}
+.dd-select:focus{
+    outline:none;
+}
