@@ -10,7 +10,7 @@ export default function AppLogin() {
 
     function Input(event) {
         const {name, value} = event.target;
-        setformdata({...formdata, [name]: value });
+        setdata({...data, [name]: value });
     }
     function Login(){
         if(data.username == 'user' && data.password=='111' ){

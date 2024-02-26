@@ -20,12 +20,13 @@ import AppLogin from './exersize1/AppLogin';
 import Check from './exersize1/Checkbox';
 import AppButton from './exersize1/AppButton';
 import AppDropdown from './exersize1/AppDropdown';
+import AppList from './components/AppList';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
 
-    <AppDropdown/>
+    <AppList/>
   </React.StrictMode>
 );
 
