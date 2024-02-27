@@ -21,12 +21,13 @@ import Check from './exersize1/Checkbox';
 import AppButton from './exersize1/AppButton';
 import AppDropdown from './exersize1/AppDropdown';
 import AppList from './components/AppList';
-
+import AppRemoveAdd from './exersize1/AppAddRemoveInput';
+import AppAddRemoveInput from './exersize1/AppAddRemoveInput';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
 
-    <AppList/>
+    <AppAddRemoveInput/>
   </React.StrictMode>
 );
 

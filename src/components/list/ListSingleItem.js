@@ -3,7 +3,7 @@ import React from "react";
 export default function ListSingleItem(props) {
      const style={
         container:{
-            
+            width: props.width,
             textAlign: 'center',
             padding: 10
         },
@@ -15,7 +15,7 @@ export default function ListSingleItem(props) {
         inner:{
             border:'1px solid silver',
             padding:10,
-            width: props.width,
+           
         },
         title:{
             fontsize:20
