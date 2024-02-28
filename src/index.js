@@ -23,11 +23,13 @@ import AppDropdown from './exersize1/AppDropdown';
 import AppList from './components/AppList';
 import AppRemoveAdd from './exersize1/AppAddRemoveInput';
 import AppAddRemoveInput from './exersize1/AppAddRemoveInput';
+import List from './components/AppLists';
+import Imagelist from './exersize1/AppImageList';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
 
-    <AppAddRemoveInput/>
+    <Imagelist/>
   </React.StrictMode>
 );
 
