@@ -9,7 +9,7 @@ export default function ListSingleItem(props) {
         },
         icon:{
             background: 'purple',
-            color: 'white',
+            color: props.color ?? 'white',
             padding: 10
         },
         inner:{

@@ -15,7 +15,10 @@ export default function List(props) {
             {props.items.map(x => <ListSingleItem
                 icon={x.icon}
                 title={x.title}
-                description={x.description} />)}
+                description={x.description} 
+                color={props.color}
+                width={props.width}
+                />)}
         </div>
     )
 }

@@ -19,6 +19,7 @@ export default function AppList() {
                 items={items}
                 width={'100%'}
                 direction={'column'}
+                color='aqua'
             />
         </div>
     )
