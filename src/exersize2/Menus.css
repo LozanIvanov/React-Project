@@ -1,0 +1,28 @@
+.menu{
+    background: #333;
+    padding: 15px;
+}
+.menu ul{
+    display: flex;
+    justify-content: space-between;
+}
+.menu ul li{
+    list-style-type: none;
+}
+.menu a{
+    color: white !important;
+    text-decoration: none;
+}
+@media (max-width: 1024px){
+    .m-hide{
+        display: none !important;
+    }
+    .menu ul{
+        flex-direction: column;
+    }
+}
+@media (min-width:1024px){
+    .d-hide{
+        display: none !important;
+    }
+}

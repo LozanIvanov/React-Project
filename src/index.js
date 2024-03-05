@@ -25,11 +25,15 @@ import AppRemoveAdd from './exersize1/AppAddRemoveInput';
 import AppAddRemoveInput from './exersize1/AppAddRemoveInput';
 import List from './components/AppLists';
 import Imagelist from './exersize1/AppImageList';
+import Input from './exersize2/AppInput';
+import Select from './exersize2/AppSelect';
+import AppTable from './exersize2/Aptable';
+import AppMenu from './exersize2/AppMenu';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
 
-    <Imagelist/>
+    <AppMenu/>
   </React.StrictMode>
 );
 
