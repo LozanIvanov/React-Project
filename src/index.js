@@ -31,12 +31,14 @@ import AppTable from './exersize2/Aptable';
 import AppMenu from './exersize2/AppMenu';
 import Homes from './components1/pages/home/Home';
 import Appcar from './components1/Appcar';
+import Quotes from './components1/AppQuotes';
+import TwoButton from './components1/Apptwobutton';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Appcar/>
+    <TwoButton/>
     
   </React.StrictMode>
 );
