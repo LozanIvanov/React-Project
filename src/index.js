@@ -29,11 +29,14 @@ import Input from './exersize2/AppInput';
 import Select from './exersize2/AppSelect';
 import AppTable from './exersize2/Aptable';
 import AppMenu from './exersize2/AppMenu';
+import Homes from './components1/pages/home/Home';
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-
-    <AppMenu/>
+    <Homes/>
+    
   </React.StrictMode>
 );
 
