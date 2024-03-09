@@ -30,12 +30,13 @@ import Select from './exersize2/AppSelect';
 import AppTable from './exersize2/Aptable';
 import AppMenu from './exersize2/AppMenu';
 import Homes from './components1/pages/home/Home';
+import Appcar from './components1/Appcar';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Homes/>
+    <Appcar/>
     
   </React.StrictMode>
 );
