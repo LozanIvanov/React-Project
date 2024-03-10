@@ -33,12 +33,13 @@ import Homes from './components1/pages/home/Home';
 import Appcar from './components1/Appcar';
 import Quotes from './components1/AppQuotes';
 import TwoButton from './components1/Apptwobutton';
+import AppTables from './components1/AppTable';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <TwoButton/>
+    <AppTables/>
     
   </React.StrictMode>
 );
