@@ -34,6 +34,7 @@ import Appcar from './components1/Appcar';
 import Quotes from './components1/AppQuotes';
 import TwoButton from './components1/Apptwobutton';
 import AppTables from './components1/AppTable';
+import AppMovies from './components1/AppMovies';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

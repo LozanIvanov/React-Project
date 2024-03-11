@@ -1,99 +1,101 @@
-import React,{useEffect,  useRef, useState} from "react";
+import React, { useEffect, useRef, useState } from "react";
 
-export default function AppTables(){
-    const[user,setUser]=useState([]);
-    const [page,setpage]=useState(1);
-    const[totalpage,setTotalpage]=useState(1);
-    const[use,setuse]=useState(null);
-    const[userinitial,setuserinitial]=useState([]);
-   
-    useEffect=(()=> {
-        fetch(`https://reqres.in/api/users?page=`+page)
-        .then(response => response.json())
-        .then(response => {
-            setUser(response.data);
-            setTotalpage(response.total_pages);
-            setuserinitial(response.data)
-           
-        });
-    
+export default function AppTables() {
+    const [users, setUsers] = useState([]);
+    const [page, setpage] = useState(1);
+    const [totalpage, setTotalpage] = useState(1);
+    const [user, setUser] = useState(null);
+    const [userinitial, setuserinitial] = useState([]);
+    //console.log( fetch("https://reqres.in/api/users?page=${page}"))
+
+    useEffect(() => {
+        fetch(`https://reqres.in/api/users?page=${page}`)
+            .then(response => response.json())
+            .then(x => {
+                setUsers(x.data);
+                setTotalpage(x.total_pages);
+                setuserinitial(x.data)
+            })
     }, [page]);
-   
- 
-    function renderIn(ser){
-        return(
-            <tr>
-                <td>{ser.id}</td>
-                <td>{ser.email}</td>
-                <td>{ser.first_name} {ser.last_name}</td>
-                <td><img src={ser.avatar} ></img></td>
+
+
+    function renderIn(user, index) {
+        return (
+            <tr key={index}>
+                <td>{user.id}</td>
+                <td>{user.email}</td>
+                <td>{user.first_name} {user.last_name}</td>
+                <td><img style={{ width: '100%', height: '100px' }} src={user.avatar} /></td>
                 <td>
-                    <button onClick={()=>{
+                    <button onClick={() => {
                         fetch(`https://reqres.in/api/users/${user.id}`)
-                        .then(response=>response.json())
-                        .then(response=>{
-                            setUser(response.data)
-                        })
+                            .then(response => response.json())
+                            .then(response => {
+                                setUser(response.data)
+                            })
                     }}>Preview</button>
                 </td>
             </tr>
-            
+
         )
-       
+
     }
-    function renderPage(){
-        const page=[];
-        for (let i = 0; i < totalpage; i++) {
+    function renderPage() {
+        const page = [];
+        for (let i = 1; i <= totalpage; i++) {
             page.push(
-                <li onClick={()=>setpage(i)}>{i}</li>
+                <li onClick={() => setpage(i)}>{i}</li>
             );
-            
         }
-        return(
+        return (
             <ul>
                 {page}
             </ul>
         )
     }
-    function renderTable(){
-        return(
+    function renderTable() {
+        return (
             <>
-            <div>
-                <input type='text' onInput={(e)=>{
-                    let input=e.target.value;
-                    if(input.length>0){
-              const filteruser=userinitial.fillter(user=>user.email.includes(input))
-              setUser([...filteruser])
-                    }else{
-                        setUser([...userinitial])
-                    }
-                }} />
-            </div>
-                        <table border={1}>
-                <thead>
-                    <tr>
-                        <td>Id</td>
-                        <td>Email</td>
-                        <td>Name</td>
-                        <td>Image</td>
-                        <td>Preview</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    {user.map(renderIn)}
-                </tbody>
+                <div style={{ width: '40%', margin: '0 auto' }}>
+                    <input type='text' onInput={(e) => {
+                        let input = e.target.value;
+                        if (input.length > 0) {
+                            const filteruser = userinitial.filter(user => user.email.includes(input))
+                            setUsers([...filteruser]);
+                        } else {
+                            setUsers([...userinitial]);
+                        }
+                    }} />
+                </div>
+                <div style={{ width: '40%', margin: '0 auto' }}>
+                    <table border={2}>
+                        <thead>
+                            <tr>
+                                <td>Id</td>
+                                <td>Email</td>
+                                <td>Name</td>
+                                <td>Image</td>
+                                <td>Preview</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {users.map(renderIn)}
+                        </tbody>
+                    </table>
+                    {renderPage()}
+                </div>
 
-            </table>
-            {renderPage}
+
+
             </>
         )
     }
-    function renderUser(){
-        return(
+    function renderUser() {
+        return (
             <>
-            <div><img src={user.avatar}></img></div>
-            <div>{user.first_name}{user.last_name}</div>
-            <button onClick={()=>setuse(null)} >Back</button>
+                <div><img src={user.avatar}></img></div>
+                <div>{user.first_name}{user.last_name}</div>
+                <button onClick={() => setUser(null)} >Back</button>
             </>
         )
     }
@@ -101,11 +103,12 @@ export default function AppTables(){
 
 
 
-    return(
-        <div>
-        {use=== null && renderTable()}
-        {use !== null && renderUser()}
-        </div>
+    return (
+        <>
+            {user === null && renderTable()}
+            {user !== null && renderUser()}
+        </>
+
     );
 
 }

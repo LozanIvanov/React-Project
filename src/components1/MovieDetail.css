@@ -1,0 +1,17 @@
+.movie-info{
+    text-align: center;
+}
+.movie-info p{
+    font-style: italic;
+    font-size: 20px;
+    font-weight: bold;
+}
+.movie-info .rating{
+    font-weight: bold;
+    color:orange;
+    font-size: 60px;
+}
+img{
+    margin:0;
+    width:30%;
+}
