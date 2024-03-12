@@ -1,0 +1,15 @@
+.news{
+    display:flex;
+    flex-wrap: wrap;
+}
+.news-box{
+    width: 30%;
+    padding: 25px;
+}
+.news-box h2{
+    font-size: 16px;
+}
+.news-box img{
+    width: 50%;
+    height: 200px;
+}

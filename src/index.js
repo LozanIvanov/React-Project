@@ -35,12 +35,13 @@ import Quotes from './components1/AppQuotes';
 import TwoButton from './components1/Apptwobutton';
 import AppTables from './components1/AppTable';
 import AppMovies from './components1/AppMovies';
+import AppNews from './components1/AppNews';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <AppTables/>
+    <AppNews/>
     
   </React.StrictMode>
 );
