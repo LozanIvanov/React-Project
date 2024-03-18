@@ -39,12 +39,14 @@ import AppNews from './components1/AppNews';
 import App3 from './exercize3/ShoppingCart';
 import AppRoutes from './ex4/routerPages/AppRouterPage';
 import {BrowserRouter} from 'react-router-dom';
+import AppProduct from './ex4/productCatalog/AppProduct';
+import AppAxios from './ex4/AxsiosApi';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-    <AppRoutes/>
+    <AppAxios/>
     </BrowserRouter>
     
   </React.StrictMode>
