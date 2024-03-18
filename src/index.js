@@ -41,12 +41,13 @@ import AppRoutes from './ex4/routerPages/AppRouterPage';
 import {BrowserRouter} from 'react-router-dom';
 import AppProduct from './ex4/productCatalog/AppProduct';
 import AppAxios from './ex4/AxsiosApi';
+import AppDelete from './ex4/AxiosDelete';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-    <AppAxios/>
+    <AppDelete/>
     </BrowserRouter>
     
   </React.StrictMode>
