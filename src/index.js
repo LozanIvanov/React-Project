@@ -37,12 +37,15 @@ import AppTables from './components1/AppTable';
 import AppMovies from './components1/AppMovies';
 import AppNews from './components1/AppNews';
 import App3 from './exercize3/ShoppingCart';
-
+import AppRoutes from './ex4/routerPages/AppRouterPage';
+import {BrowserRouter} from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App3/>
+    <BrowserRouter>
+    <AppRoutes/>
+    </BrowserRouter>
     
   </React.StrictMode>
 );
