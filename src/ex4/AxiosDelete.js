@@ -19,10 +19,14 @@ export default function AppDelete() {
             )
     }
     function deleteTodo(id) {
-        const index = todos.findIndex(x => x.id == id);
-        const temp = [...todos];
-        temp.splice(index, 1);
-        setTodos(temp);
+        axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`)/*ДА ТРИЕ ОТ БАЗАТА */
+        then(x=>{
+            const index = todos.findIndex(x => x.id == id);
+            const temp = [...todos];
+            temp.splice(index, 1);
+            setTodos(temp);
+        })
+       
     }
     return (
         <div>
