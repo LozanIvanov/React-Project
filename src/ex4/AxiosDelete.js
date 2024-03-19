@@ -20,7 +20,7 @@ export default function AppDelete() {
     }
     function deleteTodo(id) {
         axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`)/*ДА ТРИЕ ОТ БАЗАТА */
-        then(x=>{
+        .then(x=>{
             const index = todos.findIndex(x => x.id == id);
             const temp = [...todos];
             temp.splice(index, 1);
