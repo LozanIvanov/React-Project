@@ -1,0 +1,26 @@
+ tr,th, td {
+    border: 1px solid black;
+    text-align: center;
+    overflow: hidden; /* Optional: hide overflow content */
+    text-overflow: ellipsis; /* Optional: add ellipsis for overflow content */
+    white-space: nowrap; /* Optional: prevent line breaks */
+}
+table {
+    width: 60%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+ul {
+    display: flex;
+}
+li {
+    list-style-type: none;
+    width: 40px;
+    border: 1px solid black;
+    padding: 10px;
+    margin-right:  10px;
+    cursor: pointer;
+    text-align: center;
+
+}

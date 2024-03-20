@@ -43,12 +43,13 @@ import AppProduct from './ex4/productCatalog/AppProduct';
 import AppAxios from './ex4/AxsiosApi';
 import AppDelete from './ex4/AxiosDelete';
 import AppUserContext from './ex4/userContext/AppUser';
+import AppFiltter from './ex4/filterData/AppFiltter';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-    <AppUserContext/>
+    <AppFiltter/>
     </BrowserRouter>
     
   </React.StrictMode>
