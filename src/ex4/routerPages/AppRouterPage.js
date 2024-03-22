@@ -18,7 +18,7 @@ export default function AppRoutes(){
         <Routes>
             <Route path='/' exact element={<Home/>}>Home</Route>
             <Route path='about'element={<About/>} >About</Route>
-            <Route element={<Private isLogged={false}/>}>
+            <Route element={<Private isLogged={true}/>}>
             <Route path='contact' element={<Contact/>} >Contact</Route>
             </Route>
         </Routes>

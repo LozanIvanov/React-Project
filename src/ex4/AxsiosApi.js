@@ -4,27 +4,27 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 
-export default function AppAxios(){
-    const[todos,setTodos]=useState([]);
-     
-    useEffect(()=>{
-FetchD();
-    },[])
-    function FetchD(){
+export default function AppAxios() {
+    const [todos, setTodos] = useState([]);
+
+    useEffect(() => {
+        FetchD();
+    }, [])
+    function FetchD() {
         axios.get('https://jsonplaceholder.typicode.com/todos')
-        .then(response=>{
-            setTodos(response.data);
-        })
+            .then(response => {
+                setTodos(response.data);
+            })
     }
 
-    async function Fetchdata(){
-        const response= await axios.get('https://jsonplaceholder.typicode.com/todos');
+    async function Fetchdata() {
+        const response = await axios.get('https://jsonplaceholder.typicode.com/todos');
         setTodos(response.data);
     }
 
-    return(
+    return (
         <div>
-            {todos.map(todo=><li key={todo.id}>{todo.title}</li>)}
+            {todos.map(todo => <li key={todo.id}>{todo.title}</li>)}
         </div>
     )
 }

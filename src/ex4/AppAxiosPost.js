@@ -24,7 +24,7 @@ export default function AppPost(){
                 oninput={e=>setTitle(e.target.value)}/>
             </div>
             <div>
-                <button onClick={{savelTodo}} >Save</button>
+                <button onClick={saveTodo} >Save</button>
             </div>
         </div>
     )
