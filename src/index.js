@@ -45,12 +45,13 @@ import AppDelete from './ex4/AxiosDelete';
 import AppUserContext from './ex4/userContext/AppUser';
 import AppFiltter from './ex4/filterData/AppFiltter';
 import Player from './Player';
+import AppNote from './ex5/AppNote';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-    <Player/>
+    <AppNote/>
     </BrowserRouter>
     
   </React.StrictMode>
