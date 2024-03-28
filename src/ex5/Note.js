@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-export default function Note({ note,update ,deletenote,index }) {
+export default function Note({ note,updatenote ,deletenote,index }) {
 
-    const[isedit,setisedit]=useState(false);
+    const[isedit,setisedit]=useState(true);
     const[updated,setupdated]=useState(note);
 
      function InputChange(e){
@@ -11,8 +11,8 @@ export default function Note({ note,update ,deletenote,index }) {
      }
     function show(){
         return(<>
-         <h2>{updated.title}</h2>
-         <p>{updated.content}</p>
+         <h2>{note.title}</h2>
+         <p>{note.content}</p>
         </>)
     }
     function EditForm(){
@@ -35,17 +35,17 @@ export default function Note({ note,update ,deletenote,index }) {
         )
     }
     function HandleEdit(){
-        setisedit(true)
+        setisedit(false)
     }
     function saveclick(){
-        update(index,update);
-        setisedit(false)
+        updatenote(index,updated);
+        setisedit(true)
     }
     return (
         <div>
             <div className="row">
                 <div className="col-8">
-                    {isedit ? EditForm() : show()}
+                    {isedit ?  show() : EditForm() }
                 </div>
                 <div className="col-4">
                     <button  onClick={()=>HandleEdit()} className="btn btn-warning text-white fw-bold me-3">
@@ -53,7 +53,7 @@ export default function Note({ note,update ,deletenote,index }) {
                         &nbsp; Edit
                     </button>
 
-                    <button onClick={()=> deletenote(index)}  className="btn btn-danger text-white fw-bold ">
+                    <button onClick={()=>{{setisedit(true)} deletenote(index)} } className="btn btn-danger text-white fw-bold ">
                         <i className="fa fa-star"> </i>
                         &nbsp; Delete
                     </button>

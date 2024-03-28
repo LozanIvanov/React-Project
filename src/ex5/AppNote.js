@@ -6,7 +6,7 @@ export default function AppNote() {
     const [notes, setNotes] = useState([]);
 
     function AddNote() {
-        var note = { title: '', content: '' };
+        var note = { title: 'df', content: '88' };
         setNotes([note, ...notes])
     }
     function DeleteNote(index) {
@@ -16,12 +16,12 @@ export default function AppNote() {
         setNotes(newt)
     }
 
-    function Update(index, updatednote) {
+    function UpdateN(index, updatednote) {
         const updatednotes = notes.map((note, i) => {
             if (i == index) {
                 return updatednote;
             }
-            return notes;
+            return note;
         })
         setNotes(updatednotes);
     }
@@ -37,7 +37,7 @@ export default function AppNote() {
                         <Note  key={index}
                         note={note}
                             deletenote={()=>DeleteNote(index)}
-                            update={Update}
+                            updatenote={UpdateN}
                             index={index}
                         />
 
