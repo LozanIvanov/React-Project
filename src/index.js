@@ -46,12 +46,13 @@ import AppUserContext from './ex4/userContext/AppUser';
 import AppFiltter from './ex4/filterData/AppFiltter';
 import Player from './Player';
 import AppNote from './ex5/AppNote';
+import Library from './ex5/AppLibrary';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-    <AppNote/>
+    <Library/>
     </BrowserRouter>
     
   </React.StrictMode>
